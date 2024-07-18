@@ -20,7 +20,7 @@ app.use(bodyParser.json({extended: true}));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use('/' , router);
 
-const PORT = 8000;
+const PORT = process.env.PORT ||8000;
 
 const USERNAME = process.env.DB_USERNAME;
 const PASSWORD = process.env.DB_PASSWORD;
