@@ -4,7 +4,7 @@ import mongoose from "mongoose";
 
 export const Connection = async (username, password) =>
     {
-        const URL = process.env.MONGODB_URI || `mongodb+srv://${username}:${password}@ecommerce-web.jjts7up.mongodb.net/?retryWrites=true&w=majority&appName=ecommerce-web`;
+        const URL = `mongodb+srv://${username}:${password}@ecommerce-web.jjts7up.mongodb.net/?retryWrites=true&w=majority&appName=ecommerce-web`;
        try {
 
        await mongoose.connect(URL, {useUnifiedTopology: true, useNewUrlParser: true });
